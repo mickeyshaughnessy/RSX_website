@@ -1,0 +1,112 @@
+/* Common Styles for all pages */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap');
+
+:root {
+    --grid-base: 4px;
+    --scale-ratio: 1.4;
+    --color-primary: #ff4136;
+    --color-secondary: #0074d9;
+    --color-accent: #ffdc00;
+    --color-background: #f0f8ff;
+    --color-text: #333;
+    --color-button: #2ecc40;
+    --color-button-auth: #3498db;
+    --color-button-disabled: #bdc3c7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    background-image: linear-gradient(45deg, #f0f8ff 25%, #e6f3ff 25%, #e6f3ff 50%, #f0f8ff 50%, #f0f8ff 75%, #e6f3ff 75%, #e6f3ff 100%);
+    background-size: 40px 40px;
+    padding: calc(var(--grid-base) * 4);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: calc(var(--grid-base) * 4);
+}
+
+header, footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: calc(var(--grid-base) * 4) 0;
+}
+
+h1, h2 {
+    font-weight: bold;
+    margin-bottom: calc(var(--grid-base) * 6);
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(var(--scale-ratio) * var(--scale-ratio) * 1rem);
+    color: var(--color-primary);
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: calc(var(--scale-ratio) * 1rem);
+    color: var(--color-secondary);
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    letter-spacing: 1px;
+    margin-top: calc(var(--grid-base) * 8);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: calc(var(--grid-base) * 4);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--color-primary);
+}
+
+footer p {
+    text-align: center;
+}
+
+button {
+    color: white;
+    border: none;
+    padding: calc(var(--grid-base) * 3) calc(var(--grid-base) * 6);
+    cursor: pointer;
+    border-radius: calc(var(--grid-base) * 1);
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+    transition: all 0.1s ease-in-out;
+    background-color: var(--color-button);
+}
+
+button:hover {
+    background-color: #27ae60;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+}
+
+button:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+/* Additional styles can be added here or in page-specific CSS files */
